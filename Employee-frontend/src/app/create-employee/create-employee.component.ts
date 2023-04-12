@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
 import { Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './create-employee.component.html',
   styleUrls: ['./create-employee.component.css']
 })
-export class CreateEmployeeComponent {
+export class CreateEmployeeComponent implements OnInit {
 
   employee: Employee = new Employee();
   constructor(private employeeService: EmployeeService,
@@ -34,4 +34,3 @@ export class CreateEmployeeComponent {
     this.saveEmployee();
   }
 }
-
